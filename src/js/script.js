@@ -79,7 +79,7 @@ openModal('.contactYou__overlay', '.contactYou__btn', '.contactYou__overlay .mod
 
 
 const form = () =>{ 
-    const form = document.querySelector('form');
+    const form = document.querySelectorAll('form');
 
     const message = {
         loading: 'Загрузка...',
@@ -108,39 +108,42 @@ const form = () =>{
         });
     } 
  
+    form.forEach(form => {
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault(); //отключaем перезагрузку
     
-    form.addEventListener('submit', (e) =>{
-        e.preventDefault(); //отключaем перезагрузку
-
-        let statusMessage = document.createElement('div');
-        statusMessage.classList.add('status');
-        form.appendChild(statusMessage); //помещаем в конец формы
-
-
-        const formData = new FormData(form);
-        //FormData это объект, ктр соберет все содержание в инпутах и поместить в перемен formData
-
-
-        //отправляем переменую postData на сервер 
-        postData('mailer/smart.php', formData)
-        .then(res =>{
-            console.log(res);
-            statusMessage.textContent= message.success;
-        })
-        .catch ( ()=>{
-            statusMessage.textContent= message.failure;
-        })
-        .finally ( ()=>{
-            clearInput('input');
-            clearInput('textarea');
-            clearInput('checkbox');
-            setTimeout ( ()=>{
-                statusMessage.remove();
-            },5000);
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+            form.appendChild(statusMessage); //помещаем в конец формы
+    
+    
+            const formData = new FormData(form);
+            //FormData это объект, ктр соберет все содержание в инпутах и поместить в перемен formData
+    
+    
+            //отправляем переменую postData на сервер 
+            postData('mailer/smart.php', formData)
+            .then(res =>{
+                console.log(res);
+                statusMessage.textContent= message.success;
+            })
+            .catch ( ()=>{
+                statusMessage.textContent= message.failure;
+            })
+            .finally ( ()=>{
+                clearInput('input');
+                clearInput('textarea');
+                clearInput('checkbox');
+                setTimeout ( ()=>{
+                    statusMessage.remove();
+                },5000);
+            });
+    
+    
         });
-
-
     });
+    
+   
     
 };
 
