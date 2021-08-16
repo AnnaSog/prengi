@@ -1,0 +1,23 @@
+.contacts {
+    height: 87px;
+    padding: 20px 0;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info {
+        display: flex;
+        height: 50px;
+        width: 232px;
+        img {
+            width: 28px;
+            height: 21px;
+            margin-right: 11px;
+        }
+    }
+
+    
+}
+
+

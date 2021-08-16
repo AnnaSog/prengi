@@ -1,0 +1,27 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import 'base/mixins';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+ 
+@import 'blocks/title';
+@import 'blocks/contacts';
+@import 'blocks/promo';
+@import 'blocks/hamburgerMenu';
+@import 'blocks/prengi';
+@import 'blocks/proposal';
+@import 'blocks/advantage';
+@import 'blocks/storage';
+@import 'blocks/contactYou';
+@import 'blocks/footer';
+@import 'base/media';

@@ -1,0 +1,52 @@
+.proposal {
+    max-height: 889px;
+    background: url('../img/bg-min.png') 0% no-repeat;
+    padding: 79px 0 61px 0;
+
+    &__tabs {
+        margin: 0 auto;
+        margin-top: 25px;
+        max-width: 843px;
+        height: 64px;
+        list-style: none;
+        display: flex;
+        border: 1px solid #fff;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        span {
+            height: 49px;
+            border-left: 1px solid #ffffff;
+        }
+        .title_fz14tan {
+            color: tan;
+           
+        }
+    }
+
+
+    &__slider {
+        position: relative;
+        max-width: 947px;
+        max-height: 560px;
+        margin: 0 auto;
+        margin-top: 36px;
+    }
+    
+    .carousel__inner {
+        position: relative;
+        img {
+            position: absolute;
+            bottom: 85px;
+            right: 126px;
+           display: none; 
+           
+        }
+        
+        .slider_1 {
+            display: block;
+        }
+      
+        
+    }
+}

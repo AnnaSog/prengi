@@ -1,0 +1,111 @@
+.promo {
+    background: url('../img/IMG_2566 1-min.png') 47% (0% / cover) no-repeat;
+    max-height: 700px;
+    padding-top: 39px;
+    
+    .loco {
+        width: 140px;
+        height: 65px;
+    }
+    
+    &__menu {
+        display: flex;
+        justify-content: flex-end;
+        a {
+            margin-right: 45px;
+            font-size: 13px;
+            line-height: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+    }
+    &__title {
+        width: 540px;
+        height: 270px;
+        
+    }
+    .title_fz42 {
+        margin-top: 133px;
+        margin-bottom: 27px;
+    }
+    
+    &__phone {
+        transform: translate(185%, -68%);
+        width: 35%;
+    }
+    &__btn {
+      @include btn;
+    }
+
+    &__overlay {
+        @include overlay;
+        
+    }
+
+    .modal {
+        background: url('../img/IMG_2566 1-min.png') center (center / cover) no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 750px;
+        min-height: 400px;
+        color: #f2f2f2;
+
+        .title_fz21 {
+            background-color: #2187bc;
+            margin: 0;
+        }
+        .title_fz20 {
+            margin-top: 23px;
+        }
+        &__close {
+            position: absolute;
+            top: 0;
+            right: -40px;
+            font-size: 41px;
+            line-height: 21px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+    }
+
+    .feed-form{
+
+        padding: 35px 88px 50px 88px;
+     
+        color: #fff;
+        input {
+            width: 250px;
+            margin-top: 17px;
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 0 20px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #4b4b4b;
+            border: none;
+            &:nth-child(3) {
+                margin-bottom: 20px;
+                margin-right: 15px;
+                
+            }
+                
+        }
+        &_mt25 {
+            margin-top: 25px;
+        }
+
+        button {
+            @include btn;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+    }
+
+}

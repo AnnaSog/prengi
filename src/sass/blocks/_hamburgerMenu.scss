@@ -1,0 +1,99 @@
+.hamburger_wrapper {
+    .hamburger {
+        position: absolute;
+        right: 32px;
+        top: 10%;
+        transform: translateY(-50%);      
+        width: 38px;
+        height: 30px;
+        span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 2px;
+            transition: 0.5s all;
+        }
+      
+        &_active {
+            span {
+                margin-bottom: -2px;
+                &:nth-child(1) {
+                    transform: translateY(3px) rotate(-45deg)
+                }
+                &:nth-child(2) {
+                    display: none
+                }
+                &:nth-child(3) {      
+                    transform: translateY(3px) rotate(45deg)
+                }
+            }
+        }
+
+    }
+    
+    .menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s;
+        &.active {
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+        &__block {
+            position: relative;
+            width: 345px;
+            height: 100%;
+            background-color: rgba(0,0,0,.9);
+            padding-top: 140px;
+            padding-left: 40px;
+            transition: all .6s;
+            z-index: 10;
+        }
+        &__close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            color: white;
+            cursor: pointer;
+            font-size: 62px;
+            line-height: 20px;
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 35px;
+        }
+        &__link {
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 36px;
+    
+            a {
+                color: #FFFFFF;  
+                text-transform: uppercase;
+            }
+            
+        }
+        &__overlay {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: wheat;
+            opacity: .65;
+        }
+    }
+    
+}
