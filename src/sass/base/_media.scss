@@ -306,9 +306,9 @@
         }
         .carousel__inner {
             img {
-                max-width: 73%;
-                bottom: 29px;
-                right: 43px;
+                max-width: 74%;
+                bottom: 48px;
+                right: 69px;
             }
         }
         &__tabs {
@@ -450,4 +450,41 @@
             margin-top: 30px;
         }
     }
+}
+
+@media(max-width: 425px)  {
+    .proposal {
+        .carousel__inner {
+            img {
+                max-width: 74%;
+                bottom: 37px;
+                right: 52px;
+            }
+        }
+    }
+}
+
+@media(max-width: 375px) {
+    .proposal {
+        .carousel__inner {
+            img {
+                max-width: 73%;
+                bottom: 32px;
+                right: 47px;
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .proposal {
+        .carousel__inner {
+            img {
+                max-width: 73%;
+                bottom: 27px;
+                right: 40px;
+            }
+        }
+    }
+ 
 }
